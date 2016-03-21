@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VoteMate.VoteMate">
+	<Application.Resources>
+		<ResourceDictionary>
+			<Style x:Key="Button_Default" TargetType="Button">
+				<Setter Property="BackgroundColor" Value="#4992E6" />
+				<Setter Property="TextColor" Value="White" />
+				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+				<Setter Property="VerticalOptions" Value="FillAndExpand" />
+				<Setter Property="HeightRequest" Value="40" />
+				<Setter Property="FontAttributes" Value="Bold" />
+			</Style>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

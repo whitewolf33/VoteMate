@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VoteMate.RegistrationPage" Title="REGISTER">
+	<ContentPage.Content>
+		<Grid RowSpacing="5" Padding="20">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="40" />
+				<RowDefinition Height="40" />
+				<RowDefinition Height="40" />
+				<RowDefinition Height="40" />
+				<RowDefinition Height="40" />
+				<RowDefinition Height="40" />
+				<RowDefinition Height="40" />
+				<RowDefinition Height="40" />
+				<RowDefinition Height="40" />
+				<RowDefinition Height="15" />
+				<RowDefinition Height="15" />
+				<RowDefinition Height="40" />
+			</Grid.RowDefinitions>
+			<Label Grid.Row="0" Text="ORGANISATION NAME" HorizontalTextAlignment="Start" FontSize="14" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+			<Entry Grid.Row="1" Placeholder="Organisation" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+			<Label Grid.Row="2" Text="ADDRESS" HorizontalTextAlignment="Start" FontSize="14" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+			<Entry Grid.Row="3" Placeholder="ADDRESS LINE 1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+			<Entry Grid.Row="4" Placeholder="ADDRESS LINE 2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+			<Entry Grid.Row="5" Placeholder="SUBURB" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+			<Entry Grid.Row="6" Placeholder="COUNTRY" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+			<Label Grid.Row="7" Text="CONTACT EMAIL (ADMIN)" HorizontalTextAlignment="Start" FontSize="14" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+			<Entry Grid.Row="8" Placeholder="john.citizen@world.com" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+			<Label Grid.Row="9" Text="A verification code will be sent to this email" HorizontalTextAlignment="Start" FontSize="10" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+			<Button Grid.Row="11" Text="REGISTER ORGANISATION" Style="{StaticResource Button_Default}" />
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>
