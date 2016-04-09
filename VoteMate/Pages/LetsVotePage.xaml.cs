@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-
-using Xamarin.Forms;
-
-namespace VoteMate
+﻿namespace VoteMate
 {
-	public partial class LetsVotePage : ContentPage
+	public partial class LetsVotePage : BasePage
 	{
 		public LetsVotePage ()
 		{

@@ -1,15 +1,57 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VoteMate.VoteMate">
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:VoteMate;assembly=VoteMate" x:Class="VoteMate.VoteMate">
 	<Application.Resources>
 		<ResourceDictionary>
+			<Color x:Key="AppPrimaryColor">#464117</Color>
+			<Color x:Key="AppSecondaryColor">#564F1D</Color>
+			<Color x:Key="AppTertiaryColor">#6E6942</Color>
+			<Color x:Key="AppTextColor">#FFFFFF</Color>
+			<Color x:Key="AppDividorColor">#B9B7A6</Color>
+			<Color x:Key="OverlayPageColor">#5C5C5C</Color>
+			<!-- Define Styles for all common controls-->
 			<Style x:Key="Button_Default" TargetType="Button">
-				<Setter Property="BackgroundColor" Value="#4992E6" />
-				<Setter Property="TextColor" Value="White" />
+				<Setter Property="BackgroundColor" Value="#6E6942" />
+				<Setter Property="BorderColor" Value="#564F1D" />
+				<Setter Property="TextColor" Value="#FFFFFF" />
 				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
 				<Setter Property="VerticalOptions" Value="FillAndExpand" />
-				<Setter Property="HeightRequest" Value="40" />
-				<Setter Property="FontAttributes" Value="Bold" />
+				<Setter Property="BorderWidth" Value="1" />
+				<Setter Property="HeightRequest" Value="50" />
+				<Setter Property="WidthRequest" Value="150" />
+				<Setter Property="FontSize" Value="18" />
 			</Style>
+			<Style x:Key="Button_Extended" TargetType="Button">
+				<Setter Property="BackgroundColor" Value="#B1AF9C" />
+				<Setter Property="BorderColor" Value="#564F1D" />
+				<Setter Property="TextColor" Value="#564F1D" />
+				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+				<Setter Property="VerticalOptions" Value="FillAndExpand" />
+				<Setter Property="BorderWidth" Value="1" />
+				<Setter Property="HeightRequest" Value="50" />
+			</Style>
+			<Style x:Key="Label_Default" TargetType="Label">
+				<Setter Property="BackgroundColor" Value="#564F1D" />
+				<Setter Property="TextColor" Value="#FFFFFF" />
+				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+				<Setter Property="VerticalOptions" Value="FillAndExpand" />
+				<Setter Property="VerticalTextAlignment" Value="Center" />
+			</Style>
+			<Style x:Key="Entry_Default" TargetType="Entry">
+				<Setter Property="BackgroundColor" Value="#6E6942" />
+				<Setter Property="TextColor" Value="#FFFFFF" />
+				<Setter Property="PlaceholderColor" Value="#FFFFFF" />
+				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+				<Setter Property="VerticalOptions" Value="FillAndExpand" />
+				<Setter Property="HeightRequest" Value="45" />
+			</Style>
+			<Style x:Key="BoxView_Dividor" TargetType="BoxView">
+				<Setter Property="Color" Value="#FFFFFF" />
+				<Setter Property="HeightRequest" Value="1" />
+				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+				<Setter Property="VerticalOptions" Value="FillAndExpand" />
+			</Style>
+			<!-- ValueConverters -->
+			<local:ListViewSelectedItemConverter x:Key="SelectedItemConverter" />
 		</ResourceDictionary>
 	</Application.Resources>
 </Application>

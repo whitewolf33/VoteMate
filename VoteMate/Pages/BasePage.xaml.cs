@@ -2,9 +2,9 @@
 
 namespace VoteMate
 {
-	public partial class MasterPage : ContentPage
+	public partial class BasePage : ContentPage
 	{
-		public MasterPage ()
+		public BasePage ()
 		{
 			InitializeComponent ();
 		}

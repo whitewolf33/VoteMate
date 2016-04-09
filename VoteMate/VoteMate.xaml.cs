@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace VoteMate
 {
@@ -10,7 +7,8 @@ namespace VoteMate
 		public VoteMate ()
 		{
 			InitializeComponent ();
-			MainPage = new NavigationPage (new LoginPage ());
+			Bootstrapper bootstrapper = new Bootstrapper ();
+			bootstrapper.Run (this);
 		}
 	}
 }

@@ -1,30 +1,37 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" x:Class="VoteMate.LoginPage">
+<local:BasePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:VoteMate;assembly=VoteMate" xmlns:plugins="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" x:Class="VoteMate.LoginPage">
 	<ContentPage.Content>
-		<Grid Padding="20">
-			<Grid.RowDefinitions>
-				<RowDefinition Height="*" />
-				<RowDefinition Height="*" />
-			</Grid.RowDefinitions>
-			<StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-				<controls:CircleImage HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="orgImage" WidthRequest="128" HeightRequest="128" Aspect="AspectFill" BorderColor="Gray" BorderThickness="2" Source="Organisation.png" />
-			</StackLayout>
-			<Grid Grid.Row="1" Grid.Column="0" RowSpacing="10">
-				<Grid.RowDefinitions>
-					<RowDefinition Height="40" />
-					<RowDefinition Height="40" />
-					<RowDefinition Height="40" />
-					<RowDefinition Height="40" />
-					<RowDefinition Height="20" />
-					<RowDefinition Height="40" />
-				</Grid.RowDefinitions>
-				<Entry Grid.Row="0" Placeholder="Organisation" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-				<Entry Grid.Row="1" Placeholder="john.citizen@world.com" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-				<Entry Grid.Row="2" IsPassword="true" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-				<Button Grid.Row="3" Text="LOGIN" Style="{StaticResource Button_Default}" Clicked="OnLoginClicked" />
-				<Label Grid.Row="4" Text="OR" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-				<Button Grid.Row="5" Text="REGISTER" Style="{StaticResource Button_Default}" Clicked="OnRegisterClicked" />
-			</Grid>
-		</Grid>
+		<ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+			<RelativeLayout x:Name="relativeLayout" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Transparent">
+				<Grid Padding="20" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*" />
+						<RowDefinition Height="*" />
+					</Grid.RowDefinitions>
+					<StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+						<plugins:CircleImage HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="orgImage" WidthRequest="128" HeightRequest="128" Aspect="AspectFill" BorderColor="Gray" BorderThickness="2" Source="Organisation.png" />
+					</StackLayout>
+					<Grid Grid.Row="1" Grid.Column="0" RowSpacing="10">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="40" />
+							<RowDefinition Height="40" />
+							<RowDefinition Height="40" />
+							<RowDefinition Height="40" />
+							<RowDefinition Height="20" />
+							<RowDefinition Height="40" />
+						</Grid.RowDefinitions>
+						<Entry Grid.Row="0" Placeholder="Organisation" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+						<Entry Grid.Row="1" Placeholder="john.citizen@world.com" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+						<Entry Grid.Row="2" IsPassword="true" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+						<Button Grid.Row="3" Text="LOGIN" Style="{StaticResource Button_Default}" Command="{Binding CmdLogin}" />
+						<Label Grid.Row="4" Text="OR" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+						<Button Grid.Row="5" Text="REGISTER" Style="{StaticResource Button_Default}" Command="{Binding CmdRegister}" />
+					</Grid>
+				</Grid>
+				<StackLayout Opacity="0.90" IsVisible="{Binding IsBusy}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0}" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" BackgroundColor="{StaticResource OverlayPageColor}">
+					<ActivityIndicator x:Name="loginIndicator" IsRunning="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Color="White" />
+				</StackLayout>
+			</RelativeLayout>
+		</ScrollView>
 	</ContentPage.Content>
-</ContentPage>
+</local:BasePage>

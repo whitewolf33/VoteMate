@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" x:Class="VoteMate.LetsVotePage" Title="Lets Vote!">
+<local:BasePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:VoteMate;assembly=VoteMate" xmlns:plugins="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" x:Class="VoteMate.LetsVotePage" Title="Lets Vote!">
 	<ContentPage.Content>
 		<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Orientation="Horizontal" Spacing="2" Padding="20">
-			<controls:CircleImage HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="orgImage1" WidthRequest="64" HeightRequest="64" Aspect="AspectFill" BorderColor="Gray" BorderThickness="2" Source="Organisation.png" />
-			<controls:CircleImage HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="orgImage2" WidthRequest="64" HeightRequest="64" Aspect="AspectFill" BorderColor="Gray" BorderThickness="2" Source="Organisation.png" />
-			<controls:CircleImage HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="orgImage3" WidthRequest="64" HeightRequest="64" Aspect="AspectFill" BorderColor="Gray" BorderThickness="2" Source="Organisation.png" />
+			<plugins:CircleImage HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="orgImage1" WidthRequest="64" HeightRequest="64" Aspect="AspectFill" BorderColor="Gray" BorderThickness="2" Source="Organisation.png" />
+			<plugins:CircleImage HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="orgImage2" WidthRequest="64" HeightRequest="64" Aspect="AspectFill" BorderColor="Gray" BorderThickness="2" Source="Organisation.png" />
+			<plugins:CircleImage HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" x:Name="orgImage3" WidthRequest="64" HeightRequest="64" Aspect="AspectFill" BorderColor="Gray" BorderThickness="2" Source="Organisation.png" />
 		</StackLayout>
 	</ContentPage.Content>
-</ContentPage>
+</local:BasePage>

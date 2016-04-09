@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace VoteMate
 {
@@ -8,17 +7,8 @@ namespace VoteMate
 		public MainPage ()
 		{
 			InitializeComponent ();
-			masterPage.ListView.ItemSelected += OnItemSelected;
-		}
-
-		void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
-		{
-			var item = e.SelectedItem as MasterMenuItem;
-			if (item != null) {
-				Detail = new NavigationPage ((Page)Activator.CreateInstance (item.TargetType));
-				masterPage.ListView.SelectedItem = null;
-				IsPresented = false;
-			}
+			masterPage.BindingContext = BindingContext;
+			MessagingCenter.Subscribe<MainPageViewModel> (this, "HideMaster", sender => IsPresented = false);
 		}
 	}
 }
